@@ -1,11 +1,17 @@
-# This file provides the realization of the algorithm for multilevel gradient estimators.
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec 21 16:14:55 2022
+
+@author: xujingxu
+"""
+# This file provides the realization of the simulation-optimization algorithm based on multilevel gradient estimators.
+
+
 import numpy as np
-obj=2
+
+
+# The dimension of the optimization algorithm is 20; for d=2 and d=5, the algorithm is the same
 d=20
-
-
-S0=0.5
-r=0.1
 
 def generateS(n,M,B,mu):
     S=S0*np.ones(d)
@@ -105,7 +111,10 @@ def multilevelsgd(M, gamma_0,N_0,m_0, x_0, beta, rho, r, t, B,mu):
     return x, complexity_list,loss
 
 
-complexity=np.zeros(200)
+# The parameters for the optimization problem
+obj = 2
+S0=0.5
+r=0.1
 B=np.array([[1.      ,   0.15752525, 0.16653036, 0.11867184, 0.09677731, 0.07523558,
   0.13219056, 0.14916727, 0.19439135, 0.05457639, 0.10987653, 0.09950581,
   0.15196475, 0.17587578, 0.17826184, 0.14618088, 0.10107566, 0.16292886,
@@ -190,15 +199,14 @@ mu=np.array([0.63207021, 0.61992663, 0.73172743, 0.64518767, 0.73786222, 0.62169
  0.74762364, 0.62465105, 0.69609411, 0.62514971, 0.61647187, 0.65487383,
  0.75162138, 0.66063224, 0.68806338, 0.70626801, 0.61251768, 0.7479484,
  0.6509934,  0.75783933])
-complexity=np.zeros(200)
+
+
 loss=np.zeros(200)
 
-
-for k in range(50):
-    xfinal, complexity_final,add_loss=multilevelsgd(2, 10,10,2, np.zeros(d), 1, 1/2, 0, 200, B,mu)
+# Do the experiment independently for 200 times
+for k in range(200):
+    xfinal, complexity_final,add_loss=multilevelsgd(2, 10,2,2, np.zeros(d), 1, 1/2, 0, 200, B,mu)  # N_0=2, r=0, rho=1/2, gamma_0=10, beta=1 are algorithm parameters
     loss=loss+ add_loss
-    print(k)
-    print(loss)
-
-print(loss/50)
+   
+print(loss/200)
 print(complexity_final)
