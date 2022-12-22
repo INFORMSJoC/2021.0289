@@ -1,12 +1,17 @@
-#This file provides the experiment for simulation-optimization algorithm based on FD estimator
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec 21 16:14:55 2022
+
+@author: xujingxu
+"""
+
+#This file provides the experiment for simulation-optimization algorithm based on regular FD estimator
 import numpy as np
-obj=2
+
+# We set the dimension of the problem equal to 5; for d=2 and d=20 the algorithm is the same
 d=5
 
-
-S0=0.5
-r=0.1
-
+#Generate the stochastic realization of approximating systems with n-th resolution
 def generateS(n,M,B,mu):
     S=S0*np.ones(d)
     delta=1/(M**n)
@@ -18,10 +23,8 @@ def generateS(n,M,B,mu):
         
     return S,(M**n)*d
 
-
+#Generate the gradient estimator at t-th step
 def approxsgd(M, gamma_0,N_0,m_0, x_0, beta, rho, r, t, B,mu):
-    
-    
     x=x_0
     complexity=0
     complexity_list=np.zeros(t)
@@ -46,6 +49,7 @@ def approxsgd(M, gamma_0,N_0,m_0, x_0, beta, rho, r, t, B,mu):
             approxcumgrad=approxcumgrad + currentapproxgrad
             complexity=complexity + runcomplex
         approxgrad= (1/int(np.ceil(N_0*(i**(r)))))*approxcumgrad
+        # approxgrad is the regular FD estimator at t-th step
         complexity_list[i-1]=complexity
         x = x - gamma_0* approxgrad / (i**beta)
         for j in range(d):
@@ -59,11 +63,14 @@ def approxsgd(M, gamma_0,N_0,m_0, x_0, beta, rho, r, t, B,mu):
         
     return x, complexity_list,loss
 
-
+# we use two arrays to record the cumulative computational cost (complexity) and the loss from t=1 to t=200
 complexity=np.zeros(200)
-complexity=np.zeros(200)
+loss=np.zeros(200)
 
 #Set parameters for the experiment in Section 5
+obj = 2
+S0=0.5
+r=0.1
 B=np.array([[1.       ,  0.08556837, 0.09872055, 0.16524606, 0.06954566],
  [0.14352845, 1.      ,   0.16425313, 0.08897677, 0.11689557],
  [0.15313661, 0.15265617, 1.      ,   0.08923094, 0.09646848],
@@ -71,7 +78,8 @@ B=np.array([[1.       ,  0.08556837, 0.09872055, 0.16524606, 0.06954566],
  [0.13219382, 0.15286227, 0.05724685, 0.08891189, 1.        ]])
 mu=np.array([0.74398551, 0.57917634, 0.68815336, 0.79120564, 0.56790853])
 
-loss=0
+# we run experiments for 200 times
 for k in range(200):
-    xfinal, complexity_final,add_loss=approxsgd(2, 10,1,5, np.zeros(d), 1, 1/2, 0, 200, B,mu)
+    xfinal, complexity_final,add_loss=approxsgd(2, 10,2,5, np.zeros(d), 1, 1/2, 0, 200, B,mu) # in the algorithm, we set N_0=2,r=0,rho=1/2,gamma_0=10
     loss=loss+ add_loss
+print(loss/200, complexity_final)
