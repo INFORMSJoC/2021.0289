@@ -4,13 +4,15 @@ Created on Thu Jan 14 16:29:22 2021
 
 @author: xujingxu
 """
+# calculate optimal solution for portfolio selection
+
 import numpy as np
-d=20
-B=np.random.uniform(0.05,0.2,(d,d))
+d=20 # we can also set d=2 and d=5
+B=np.random.uniform(0.05,0.2,(d,d)) # the covariance matrix is randomly generated
 for i in range(d):
     B[i][i]=1
 print(B)
-mu=np.random.uniform(0.6,0.8,d)
+mu=np.random.uniform(0.6,0.8,d) # the mean return is randomly generated
 print(mu)
 S_0=0.5
 r=0.1
@@ -25,7 +27,5 @@ a=np.zeros(d)
 for i in range(d):
     a[i]=S_0*(np.exp(mu[i])-np.exp(r))*(2-S_0*np.exp(r))
 a=np.transpose(a)
-print(np.matmul(V_inverse,a))
-print(np.array([0.1225206,  0.05452594, 0.01628473, 0.10638712, 0.07991563, 0.11723473,
- 0.15481239, 0.04868666, 0.04770507, 0.03623724])/np.sum(np.array([0.1225206,  0.05452594, 0.01628473, 0.10638712, 0.07991563, 0.11723473,
- 0.15481239, 0.04868666, 0.04770507, 0.03623724])))
+optvalue = np.matmul(V_inverse,a)
+print(optvalue) # If all entries are in [0,1], then it is optimal; otherwise we generate another B and mu and recalculate
