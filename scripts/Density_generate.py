@@ -2,10 +2,11 @@
 # Script for generating estimated density 
 ###############################################################################
 
+#xlist is the estimator for optimal decision variable theta^* after 200 iterations, using 200 independent runs
+theta1= xlist[:,0] # the first dimension of the estimator of theta^*
+theta2= xlist[:,1] # the second dimension of the estimator of theta^*
 
-theta1= xlist[:,0]
-theta2= xlist[:,1]
-
+# [0.23173061, 0.26217133] is the optimal value of theta
 def normfun(x, mu, sigma):
     pdf = np.exp(-((x - mu) ** 2) / (2 * sigma ** 2)) / (sigma * np.sqrt(2 * np.pi))
     return pdf
