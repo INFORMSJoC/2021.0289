@@ -45,12 +45,20 @@ In src/Multilevel FD estimator.py, we implement the simulation optimization algo
 
 ## Results
 
-We present all the experimental results in the folder results, as well as figures in the paper. Specifically, we provide:
+We present all the experimental results in the folder results. Specifically, we provide:
 
-the mean square error of $\theta_t$ when dimension is 2,5 and 20 and when the simulation-optimization algorithm is based on FD estimator and multilevel FD estimator respectively.
+for Algorithm 1 and Algorithm 2, the mean square error of $\theta_t$ for $t=1,2,...200$ when dimension is 2; for Algorithm 1, we provide the value of $\theta_t$ for 200 independent solving process to demonstrate central limit theorem;
 
+for Algorithm 2, the mean square error of $\theta_t$ and cumulative computational cost for $t=1,2,...200$ when dimension is 5;
+
+for Algorithm 1 and Algorithm 2, the mean square error of $\theta_t$ and cumulative computational cost for $t=1,2,...200$ when dimension is 20.
+
+We provide original figures in the paper. 
 
 ## Replicating
 
-## 
+In scripts, we provide the code for replicating Figure 2 (estimated density function by using kernel density estimation). Other figures in the paper can be replicated by using numerical results we provide.
 
+## Additional Document
+
+We provide appendices ...
