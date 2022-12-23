@@ -45,10 +45,12 @@ In src/Multilevel FD estimator.py, we implement the simulation optimization algo
 
 ## Results
 
+We present all the experimental results in the folder results, as well as figures in the paper. Specifically, we provide:
 
+the mean square error of $\theta_t$ when dimension is 2,5 and 20 and when the simulation-optimization algorithm is based on FD estimator and multilevel FD estimator respectively.
 
 
 ## Replicating
 
-
+## 
 
