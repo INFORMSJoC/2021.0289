@@ -2,7 +2,11 @@
 # Script for generating estimated density 
 ###############################################################################
 
-#xlist is the estimator for optimal decision variable theta^* after 200 iterations, using 200 independent runs
+#xlist is the estimator for optimal decision variable theta^* after 200 iterations, using 200 independent run
+import matplotlib.pyplot as plt
+import pandas
+import seaborn as sns
+
 theta1= xlist[:,0] # the first dimension of the estimator of theta^*
 theta2= xlist[:,1] # the second dimension of the estimator of theta^*
 
