@@ -1,5 +1,5 @@
 ###############################################################################
-# Script for generating estimated density 
+# Script for generating estimated density of theta_t
 ###############################################################################
 
 #xlist is the estimator for optimal decision variable theta^* after 200 iterations, using 200 independent run
