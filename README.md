@@ -23,7 +23,7 @@ Below is the BibTex for citing this version of the code.
   title =         {Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations, v2021.0289},
   year =          {2022},
   doi =           {TBA},
-  note =          {[https://github.com/INFORMSJoC/2021.0289](https://github.com/INFORMSJoC/2021.0289)},
+  note =          {available for download at https://github.com/INFORMSJoC/2021.0289},
 }  
 ```
 
