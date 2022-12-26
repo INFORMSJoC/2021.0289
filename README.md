@@ -8,13 +8,9 @@ Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](
 The software and data in this repository are a snapshot of the software and data
 that were used in the research reported on in the paper 
 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
-
 ## Cite
 
-To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI.
+To cite this software, please cite the [paper](https://doi.org/10.1287/ijoc.2019.0934) using its DOI and the software itself, using the following DOI. (DOI TBA)
 
 [![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
 
@@ -24,10 +20,10 @@ Below is the BibTex for citing this version of the code.
 @article{CacheTest,
   author =        {Jingxu Xu and Zeyu Zheng},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest} Version v1.0},
+  title =         {Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations, v2021.0289},
   year =          {2022},
-  doi =           {10.5281/zenodo.3977566},
-  url =           {https://github.com/INFORMSJoC/JoCTemplate},
+  doi =           {TBA},
+  note =           {[https://github.com/INFORMSJoC/2021.0289](https://github.com/INFORMSJoC/2021.0289)},
 }  
 ```
 
