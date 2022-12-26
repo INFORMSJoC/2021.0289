@@ -17,13 +17,13 @@ To cite this software, please cite the paper [Gradient-based Simulation Optimiza
 Below is the BibTex for citing this version of the code.
 
 ```
-@article{CacheTest,
+@article{multiapproximationopt,
   author =        {Jingxu Xu and Zeyu Zheng},
   publisher =     {INFORMS Journal on Computing},
   title =         {Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations, v2021.0289},
   year =          {2022},
   doi =           {TBA},
-  note =           {https://github.com/INFORMSJoC/2021.0289},
+  note =          {[https://github.com/INFORMSJoC/2021.0289](https://github.com/INFORMSJoC/2021.0289)},
 }  
 ```
 
