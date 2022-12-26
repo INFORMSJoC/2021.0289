@@ -61,4 +61,4 @@ In scripts, we provide the code for replicating Figure 2 (estimated density func
 
 ## Additional Document
 
-We provide appendices ...
+In docs/appendix_joc_multi.pdf, we present the appendix of the paper.The appendix provides additional lemmas, proofs of results in the main body, and additional results that are complementary to the main body.
