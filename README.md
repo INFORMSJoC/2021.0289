@@ -22,7 +22,7 @@ Below is the BibTex for citing this version of the code.
   publisher =     {INFORMS Journal on Computing},
   title =         {Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations, v2021.0289},
   year =          {2022},
-  doi =           {TBA},
+  doi =           {105281/zenodo.7485443},
   note =          {available for download at https://github.com/INFORMSJoC/2021.0289},
 }  
 ```
