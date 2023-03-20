@@ -6,11 +6,11 @@ This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
 The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/journal/ijoc).
+that were used in the research reported on in the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1279).
 
 ## Cite
 
-To cite this software, please cite the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/journal/ijoc) using its DOI and the software itself, using the following DOI. (DOI TBA)
+To cite this software, please cite the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1279) using its DOI and the software itself, using the following DOI. (DOI TBA)
 
 [![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
 
