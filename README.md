@@ -10,9 +10,7 @@ that were used in the research reported on in the paper [Gradient-based Simulati
 
 ## Cite
 
-To cite this software, please cite the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1279) using its DOI and the software itself, using the following DOI. (DOI TBA)
-
-[![DOI](https://zenodo.org/badge/285853815.svg)](https://zenodo.org/badge/latestdoi/285853815)
+To cite this software, please cite the paper [Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations](https://pubsonline.informs.org/doi/10.1287/ijoc.2023.1279) using its DOI and the software itself, using the following DOI: [https://doi.org/10.1287/ijoc.2023.1279.cd](https://doi.org/10.1287/ijoc.2023.1279.cd)
 
 Below is the BibTex for citing this version of the code.
 
@@ -22,7 +20,7 @@ Below is the BibTex for citing this version of the code.
   publisher =     {INFORMS Journal on Computing},
   title =         {Gradient-based Simulation Optimization Algorithms via Multi-Resolution System Approximations, v2021.0289},
   year =          {2022},
-  doi =           {105281/zenodo.7485443},
+  doi =           {10.1287/ijoc.2023.1279.cd},
   note =          {available for download at https://github.com/INFORMSJoC/2021.0289},
 }  
 ```
